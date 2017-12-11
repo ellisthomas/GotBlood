@@ -10,6 +10,11 @@
             templateUrl: "/App/views/login.html",
             controller: "loginController"
         })
+        .when("/donor",
+        {
+            templateUrl: "App/views/donor/donor.html",
+            controller: "donorController"
+        })
         .otherwise("/",
     );
 }]);
