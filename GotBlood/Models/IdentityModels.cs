@@ -7,6 +7,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
 using GotBlood.DataModels;
+using System.Collections.Generic;
 
 namespace GotBlood.Models
 {

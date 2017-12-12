@@ -1,10 +1,13 @@
-﻿<div>
-    <button ng-click="GetUserInfo()"></button>
+﻿<input class="list-inline center-block text-center input-lg" type="text" name="" placeholder="Search contacts ..." ng-model="searchText">
+<h3>Donors</h3>
+<div ng-repeat="user in users | filter: searchText">
+    <div class="panel panel-default panel-transparent">
+        <div class="panel-body">
 
-    {{message}}
+            <!-- <i class="fa fa-address-card" aria-hidden="true"></i> -->
+            <div class="col-xs-12"><a class="fa fa-address-card">Name: {{user.FirstName}} {{user.LastName}}<br>Address: {{user.Address}} {{user.Loaction}} <br>Phone: {{user.Phone}}<br>Email: {{user.Email}}<br>Birthdate: {{user.Birthdate}}</a></div>
+            <div></div>
+            
+        </div>
+    </div>
 </div>
-
-
-
-
-// GET 

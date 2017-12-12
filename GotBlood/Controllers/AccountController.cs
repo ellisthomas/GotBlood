@@ -16,10 +16,11 @@ using Microsoft.Owin.Security.OAuth;
 using GotBlood.Models;
 using GotBlood.Providers;
 using GotBlood.Results;
+using System.Data.Entity;
 
 namespace GotBlood.Controllers
 {
-    [Authorize]
+    
     [RoutePrefix("api/Account")]
     public class AccountController : ApiController
     {
@@ -51,19 +52,32 @@ namespace GotBlood.Controllers
 
         public ISecureDataFormat<AuthenticationTicket> AccessTokenFormat { get; private set; }
 
-        // GET api/Account/UserInfo
-        [HostAuthentication(DefaultAuthenticationTypes.ExternalBearer)]
-        [Route("UserInfo")]
-        public UserInfoViewModel GetUserInfo()
-        {
-            ExternalLoginData externalLogin = ExternalLoginData.FromIdentity(User.Identity as ClaimsIdentity);
+        //// GET api/Account/UserInfo
+        //[HostAuthentication(DefaultAuthenticationTypes.ExternalBearer)]
+        //[Route("UserInfo")]
+        //public UserInfoViewModel UserInfo
+        //{
+        //    get
+        //    {
+        //        ExternalLoginData externalLogin = ExternalLoginData.FromIdentity(User.Identity as ClaimsIdentity);
 
-            return new UserInfoViewModel
-            {
-                Email = User.Identity.GetUserName(),
-                HasRegistered = externalLogin == null,
-                LoginProvider = externalLogin != null ? externalLogin.LoginProvider : null
-            };
+        //        return new UserInfoViewModel
+        //        {
+        //            Email = User.Identity.GetUserName(),
+        //            HasRegistered = externalLogin == null,
+        //            LoginProvider = externalLogin != null ? externalLogin.LoginProvider : null
+        //        };
+        //    }
+        //}
+
+        //GET api/Account/UserInfo
+        [Authorize]
+        [Route("UserInfo")]
+        public IEnumerable<ApplicationUser> GetUserInfo()
+        {
+            var db = new ApplicationDbContext();
+            IEnumerable<ApplicationUser> users = db.Users;
+            return users;
         }
 
         // POST api/Account/Logout
