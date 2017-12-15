@@ -9,6 +9,8 @@ namespace GotBlood.Migrations
 
     internal sealed class Configuration : DbMigrationsConfiguration<GotBlood.Models.ApplicationDbContext>
     {
+        private DbContext context;
+
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
@@ -25,13 +27,44 @@ namespace GotBlood.Migrations
                 Address = "304 NSS Ln",
                 Location = "Nash, TN 37211",
                 Phone = "555-555-5555",
-                Birthdate = new DateTime(1980,11,08),
+                Birthdate = new DateTime(1980, 11, 08),
                 UserName = "thomas",
                 Email = "ellis@thomas.com",
                 Type = 0,
             };
 
             userManager.CreateAsync(user, "123456").Wait();
+
+            context.BloodBank.AddOrUpdate(
+                x => x.BloodBankStreetAddress,
+                new DataModels.BloodBank
+                {
+                    BloodBankName = "Crazy",
+                    BloodBankStreetAddress = "123 Crazy street",
+                    BloodBankCity = "Nashville",
+                    BloodBankState = "TN",
+                    BloodBankZip = "37201",
+                    BloodBankPhone = "333-333-3333"
+                },
+                new DataModels.BloodBank
+                {
+                    BloodBankName = "Ruby Blood",
+                    BloodBankStreetAddress = "123 Smooth street",
+                    BloodBankCity = "Nashville",
+                    BloodBankState = "TN",
+                    BloodBankZip = "37201",
+                    BloodBankPhone = "333-333-3333"
+                },
+                new DataModels.BloodBank
+                {
+                    BloodBankName = "Red Blood",
+                    BloodBankStreetAddress = "123 Blood street",
+                    BloodBankCity = "Nashville",
+                    BloodBankState = "TN",
+                    BloodBankZip = "37201",
+                    BloodBankPhone = "333-333-3333"
+                }
+            );
         }
     }
 }

@@ -41,7 +41,7 @@ namespace GotBlood.Models
         public string Phone { get; set; }
         [Required]
         public BloodType Type { get; set; }
-        public object BloodType { get; internal set; }
+        public object BloodType { get; set; }
     }
 
     public enum BloodType
@@ -56,8 +56,10 @@ namespace GotBlood.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
 
-        public DbSet<BloodBank> BloodBanks { get; set; }
+        public DbSet<BloodBank> BloodBank { get; set; }
         public DbSet<BloodDrive> BloodDrives { get; set; }
+
+        public IEnumerable<ApplicationUser> BloodBanks { get; internal set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

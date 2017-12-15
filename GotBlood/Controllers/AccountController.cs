@@ -80,6 +80,15 @@ namespace GotBlood.Controllers
             return users;
         }
 
+        //GET api/Account/BloodBanks
+        [Route("BloodBanks")]
+        public IEnumerable<ApplicationUser> GetBloodBanks()
+        {
+            var db = new ApplicationDbContext();
+            IEnumerable<ApplicationUser> banks = db.BloodBanks;
+            return banks;
+        }
+
         // POST api/Account/Logout
         [Route("Logout")]
         public IHttpActionResult Logout()

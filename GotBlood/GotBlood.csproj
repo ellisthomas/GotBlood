@@ -246,6 +246,18 @@
     <Compile Include="Migrations\201712091551153_addedToAccountControllerAppUserData.Designer.cs">
       <DependentUpon>201712091551153_addedToAccountControllerAppUserData.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712130144554_updatedBloodDrives.cs" />
+    <Compile Include="Migrations\201712130144554_updatedBloodDrives.Designer.cs">
+      <DependentUpon>201712130144554_updatedBloodDrives.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712150149544_updatedBloodBanks.cs" />
+    <Compile Include="Migrations\201712150149544_updatedBloodBanks.Designer.cs">
+      <DependentUpon>201712150149544_updatedBloodBanks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712150204407_changedSeedDataBloodBanks.cs" />
+    <Compile Include="Migrations\201712150204407_changedSeedDataBloodBanks.Designer.cs">
+      <DependentUpon>201712150204407_changedSeedDataBloodBanks.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -258,9 +270,11 @@
   <ItemGroup>
     <Content Include="App\app.js" />
     <Content Include="App\appconfig.js" />
+    <Content Include="App\controllers\bankController.js" />
     <Content Include="App\controllers\donorController.js" />
     <Content Include="App\controllers\homeController.js" />
     <Content Include="App\controllers\loginController.js" />
+    <Content Include="App\views\bank\bank.html" />
     <Content Include="App\views\donor\donor.html" />
     <Content Include="App\views\home\home.html" />
     <Content Include="App\views\login.html" />
@@ -352,6 +366,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712091551153_addedToAccountControllerAppUserData.resx">
       <DependentUpon>201712091551153_addedToAccountControllerAppUserData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712130144554_updatedBloodDrives.resx">
+      <DependentUpon>201712130144554_updatedBloodDrives.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712150149544_updatedBloodBanks.resx">
+      <DependentUpon>201712150149544_updatedBloodBanks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712150204407_changedSeedDataBloodBanks.resx">
+      <DependentUpon>201712150204407_changedSeedDataBloodBanks.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

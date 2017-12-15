@@ -8,6 +8,8 @@ namespace GotBlood.DataModels
 {
     public class BloodBank
     {
+        public string BloodBankName { get; set; }
+    
         public int Id { get; set; }
         [Required]
         public string BloodBankStreetAddress { get; set; }

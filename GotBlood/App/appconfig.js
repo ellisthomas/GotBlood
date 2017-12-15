@@ -15,6 +15,11 @@
             templateUrl: "App/views/donor/donor.html",
             controller: "donorController"
         })
+        .when("/bank",
+        {
+            templateUrl: "App/views/bank/bank.html",
+            controller: "bankController"
+        })
         .otherwise("/",
     );
 }]);
