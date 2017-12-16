@@ -54,7 +54,7 @@ namespace GotBlood.Models
         public string Location { get; set; }
         public DateTime Birthdate { get; set; }
         public string LastName { get; set; }
-        public object Type { get; set; }
+        public BloodType Type { get; set; }
         public string Phone { get; set; }
     }
 

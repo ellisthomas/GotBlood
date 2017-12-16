@@ -30,6 +30,10 @@ app.run(["$rootScope", "$http", "$location", function ($rootScope, $http, $locat
         return !!sessionStorage.getItem("token")
     }
 
+    $rootScope.logout = function () {
+        sessionStorage.removeItem("token");
+    }
+
     $rootScope.$on("$routeChangeStart", function (event, currRoute) {
         var anonymousPage = false;
         var originalPath = currRoute.originalPath;

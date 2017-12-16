@@ -18,6 +18,11 @@ namespace GotBlood.Migrations
 
         protected override void Seed(GotBlood.Models.ApplicationDbContext context)
         {
+            var adminRole = new IdentityRole("Admin");
+            context.Roles.AddOrUpdate(r => r.Name, adminRole);
+
+            context.SaveChanges();
+
             var userManager = new ApplicationUserManager(new UserStore<ApplicationUser>(context));
 
             var user = new ApplicationUser
@@ -34,6 +39,7 @@ namespace GotBlood.Migrations
             };
 
             userManager.CreateAsync(user, "123456").Wait();
+            userManager.AddToRoleAsync(user.Id, "Admin").Wait();
 
             context.BloodBank.AddOrUpdate(
                 x => x.BloodBankStreetAddress,

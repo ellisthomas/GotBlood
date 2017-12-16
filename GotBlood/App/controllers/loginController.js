@@ -51,7 +51,8 @@
                 Address: auth.address,
                 FirstName: auth.firstName,
                 LastName: auth.lastName,
-                Birthdate: auth.birthdate
+                Birthdate: auth.birthdate,
+                Type: auth.bloodType
             }
         })
             .then(function (result) {
@@ -64,14 +65,7 @@
             }, function (result) {
                 $scope.error = result.data.error_description;
                 $scope.inProgress = false;
-            });
-            //.then((resultz) => {
-            //    resolve(resultz);
-            //    $location.path("/");
-            //    console.log("resultz", resultz);
-            //}).catch((error) => {
-            //    reject(error);
-            //});
+            });         
     };
 
 }]);

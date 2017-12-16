@@ -72,7 +72,7 @@ namespace GotBlood.Controllers
         //}
 
         //GET api/Account/UserInfo
-        [Authorize]
+        [Authorize(Roles ="Admin")]
         [Route("UserInfo")]
         public IEnumerable<ApplicationUser> GetUserInfo()
         {
@@ -352,7 +352,7 @@ namespace GotBlood.Controllers
                 return BadRequest(ModelState);
             }
 
-            var user = new ApplicationUser() { UserName = model.UserName, Email = model.Email, FirstName = model.FirstName, LastName = model.LastName, Address = model.Address, Location = model.Location, Birthdate = model.Birthdate, BloodType = model.Type, Phone = model.Phone };
+            var user = new ApplicationUser() { UserName = model.UserName, Email = model.Email, FirstName = model.FirstName, LastName = model.LastName, Address = model.Address, Location = model.Location, Birthdate = model.Birthdate, Type = model.Type, Phone = model.Phone };
 
             IdentityResult result;
             try

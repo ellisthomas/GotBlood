@@ -41,7 +41,6 @@ namespace GotBlood.Models
         public string Phone { get; set; }
         [Required]
         public BloodType Type { get; set; }
-        public object BloodType { get; set; }
     }
 
     public enum BloodType
