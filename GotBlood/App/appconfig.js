@@ -18,7 +18,7 @@
         .when("/bank",
         {
             templateUrl: "App/views/bank/bank.html",
-            controller: "bankController"
+            controller: "bloodBankController"
         })
         .otherwise("/",
     );

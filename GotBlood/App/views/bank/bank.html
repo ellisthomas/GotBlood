@@ -1,10 +1,11 @@
-﻿<input class="list-inline center-block text-center input-lg" type="text" name="" placeholder="Search..." ng-model="searchText">
+﻿<br />
+<input class="list-inline center-block text-center input-lg" type="text" name="" placeholder="Search..." ng-model="searchText">
 <h3>Donation Locations</h3>
 <div ng-repeat="bank in banks | filter: searchText">
     <div class="panel panel-default panel-transparent">
         <div class="panel-body">
             <!-- <i class="fa fa-address-card" aria-hidden="true"></i> -->
-            <div class="col-xs-12"><a class="fa fa-address-card">Name: {{bank.BloodBankName}} {{user.LastName}}<br>Address: {{user.Address}} {{user.Location}} <br>Phone: {{user.Phone}}<br>Email: {{user.Email}}<br>Birthdate: {{user.Birthdate}}</a></div>
+            <div class="col-xs-12"><a class="fa fa-address-card">Name: {{bank.BloodBankName}} <br>Address: {{bank.BloodBankStreetAddress}} {{bank.BloodBankCity}} {{bank.BloodBankState}} {{bank.BloodBankZip}} <br>Phone: {{bank.BloodBankPhone}}</a></div>
         </div>
     </div>
 </div>

@@ -227,6 +227,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BloodBanksController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="DataModels\BloodBank.cs" />
@@ -258,6 +259,10 @@
     <Compile Include="Migrations\201712150204407_changedSeedDataBloodBanks.Designer.cs">
       <DependentUpon>201712150204407_changedSeedDataBloodBanks.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712161550128_bloodBanksController.cs" />
+    <Compile Include="Migrations\201712161550128_bloodBanksController.Designer.cs">
+      <DependentUpon>201712161550128_bloodBanksController.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -270,7 +275,7 @@
   <ItemGroup>
     <Content Include="App\app.js" />
     <Content Include="App\appconfig.js" />
-    <Content Include="App\controllers\bankController.js" />
+    <Content Include="App\controllers\bloodBankController.js" />
     <Content Include="App\controllers\donorController.js" />
     <Content Include="App\controllers\homeController.js" />
     <Content Include="App\controllers\loginController.js" />
@@ -375,6 +380,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712150204407_changedSeedDataBloodBanks.resx">
       <DependentUpon>201712150204407_changedSeedDataBloodBanks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712161550128_bloodBanksController.resx">
+      <DependentUpon>201712161550128_bloodBanksController.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

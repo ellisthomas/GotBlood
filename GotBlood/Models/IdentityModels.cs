@@ -59,8 +59,6 @@ namespace GotBlood.Models
         public DbSet<BloodBank> BloodBank { get; set; }
         public DbSet<BloodDrive> BloodDrives { get; set; }
 
-        public IEnumerable<ApplicationUser> BloodBanks { get; internal set; }
-
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

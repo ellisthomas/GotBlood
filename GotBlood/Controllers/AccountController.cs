@@ -17,6 +17,7 @@ using GotBlood.Models;
 using GotBlood.Providers;
 using GotBlood.Results;
 using System.Data.Entity;
+using GotBlood.DataModels;
 
 namespace GotBlood.Controllers
 {
@@ -82,10 +83,10 @@ namespace GotBlood.Controllers
 
         //GET api/Account/BloodBanks
         [Route("BloodBanks")]
-        public IEnumerable<ApplicationUser> GetBloodBanks()
+        public IEnumerable<BloodBank> GetBloodBanks()
         {
             var db = new ApplicationDbContext();
-            IEnumerable<ApplicationUser> banks = db.BloodBanks;
+            var banks = db.BloodBank;
             return banks;
         }
 
