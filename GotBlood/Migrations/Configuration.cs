@@ -39,35 +39,44 @@ namespace GotBlood.Migrations
             };
 
             userManager.CreateAsync(user, "123456").Wait();
-            userManager.AddToRoleAsync(user.Id, "Admin").Wait();
+            //userManager.AddToRoleAsync(user.Id, "Admin").Wait();
 
             context.BloodBank.AddOrUpdate(
                 x => x.BloodBankStreetAddress,
                 new DataModels.BloodBank
                 {
-                    BloodBankName = "Crazy",
-                    BloodBankStreetAddress = "123 Crazy street",
+                    BloodBankName = "Nashville Platelet Donation Center",
+                    BloodBankStreetAddress = "2201 Charlotte Ave",
                     BloodBankCity = "Nashville",
                     BloodBankState = "TN",
-                    BloodBankZip = "37201",
+                    BloodBankZip = "37203",
                     BloodBankPhone = "333-333-3333"
                 },
                 new DataModels.BloodBank
                 {
-                    BloodBankName = "Ruby Blood",
-                    BloodBankStreetAddress = "123 Smooth street",
+                    BloodBankName = "Nashville Blood Donation Center",
+                    BloodBankStreetAddress = "2201 Charlotte Ave",
                     BloodBankCity = "Nashville",
                     BloodBankState = "TN",
-                    BloodBankZip = "37201",
+                    BloodBankZip = "37203",
                     BloodBankPhone = "333-333-3333"
                 },
                 new DataModels.BloodBank
                 {
-                    BloodBankName = "Red Blood",
-                    BloodBankStreetAddress = "123 Blood street",
+                    BloodBankName = "Nashville Zoo",
+                    BloodBankStreetAddress = "3777 Nolensville Rd",
                     BloodBankCity = "Nashville",
                     BloodBankState = "TN",
-                    BloodBankZip = "37201",
+                    BloodBankZip = "37211",
+                    BloodBankPhone = "333-333-3333"
+                },
+                new DataModels.BloodBank
+                {
+                    BloodBankName = "Bridgestone Arena Nashville Predators",
+                    BloodBankStreetAddress = "501 Broadway",
+                    BloodBankCity = "Nashville",
+                    BloodBankState = "TN",
+                    BloodBankZip = "37203",
                     BloodBankPhone = "333-333-3333"
                 }
             );

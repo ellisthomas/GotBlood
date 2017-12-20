@@ -23,6 +23,7 @@ namespace GotBlood
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                        "~/Scripts/angular.js",
                        "~/Scripts/angular-route.js",
+                       "~/Scripts/ng-map.min.js",
                        "~/App/app.js",
                        "~/App/appconfig.js").IncludeDirectory("~/App/controllers", "*.js", true));
 

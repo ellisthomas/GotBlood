@@ -1,1 +1,1 @@
-﻿var app = angular.module("GotBlood", ["ngRoute"]);
+﻿var app = angular.module("GotBlood", ["ngMap", "ngRoute"]);

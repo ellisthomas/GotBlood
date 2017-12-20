@@ -4,9 +4,22 @@
 <div ng-repeat="bank in banks | filter: searchText">
     <div class="panel panel-default panel-transparent">
         <div class="panel-body">
-            <!-- <i class="fa fa-address-card" aria-hidden="true"></i> -->
-            <div class="col-xs-12"><a class="fa fa-address-card">Name: {{bank.BloodBankName}} <br>Address: {{bank.BloodBankStreetAddress}} {{bank.BloodBankCity}} {{bank.BloodBankState}} {{bank.BloodBankZip}} <br>Phone: {{bank.BloodBankPhone}}</a></div>
+            <div class="col-xs-3"><a class="fa fa-address-card">{{bank.BloodBankName}} <br>{{bank.BloodBankStreetAddress}} {{bank.BloodBankCity}} {{bank.BloodBankState}} {{bank.BloodBankZip}} <br>{{bank.BloodBankPhone}}</a></div>
         </div>
     </div>
 </div>
+<ng-map zoom="12" center="36.166687, -86.779932">
+    <marker position="36.156812, 86.807536"
+            icon="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png">
+    </marker>
+    <marker position="36.156812, 86.807536"
+            icon="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png">
+    </marker>
+    <marker position="36.089195, -86.741524"
+            icon="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png">
+    </marker>
+    <marker position="36.159174, -86.778496"
+            icon="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png">
+    </marker>
+</ng-map>
 
