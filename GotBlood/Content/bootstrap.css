@@ -856,10 +856,7 @@ pre code {
 .col-lg-10,
 .col-lg-11,
 .col-lg-12 {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
+  margin: auto 0;
 }
 
 .col-xs-1,
@@ -921,7 +918,7 @@ pre code {
 }
 
 .col-xs-12 {
-  width: 100%;
+  margin: auto 0;
 }
 
 @media (min-width: 768px) {

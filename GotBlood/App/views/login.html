@@ -1,37 +1,4 @@
-﻿<!--<section class="hero is-fullheight" id="login">
-    <div class="hero-body">
-        <div class="container">
-            <div class="columns is-centered">
-                <div class="column is-one-third-desktop is-10-mobile">
-                    <div class="box has-text-centered">
-                        <div ng-show="error" class="notification is-danger">
-                            {{error}}
-                        </div>
-                        <div class="field">
-                            <p class="control has-icons-left">
-                                <input ng-model="username" class="input" type="text" placeholder="Username">
-                                <span class="icon is-small is-left">
-                                    <i class="fa fa-user"></i>
-                                </span>
-                            </p>
-                        </div>
-                        <div class="field">
-                            <p class="control has-icons-left">
-                                <input ng-model="password" class="input" type="password" placeholder="Password">
-                                <span class="icon is-small is-left">
-                                    <i class="fa fa-lock"></i>
-                                </span>
-                            </p>
-                        </div>
-                        <div class="field">
-                            <button class="button is-primary" ng-click="login()" ng-class="{'is-loading':inProgress}">Sign In</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>-->
+﻿
 
 <div uib-alert ng-repeat="alert in alerts" class="alert-danger" data-ng-animate="alert-danger">
     {{alert.msg}}
@@ -43,15 +10,17 @@
             <h2 class="black">Login</h2>
         </div>
         <div class="row">
-            <div class="col-xs-12 input-group">
+            <div class="col-xs-12 input-group center-block">
                 <input type="text" class="form-control" placeholder="Username" ng-model="userLogin.username" required autofocus>
             </div>
         </div>
+        <br />
         <div class="row">
             <div class="col-xs-12 input-group">
                 <input type="password" class="form-control" placeholder="Password" ng-model="userLogin.password" required>
             </div>
         </div>
+        <br />
         <div class="row">
             <div class="col-xs-12 buttons">
                 <button class="col-xs-3 btn btn-danger" ng-click="login()" ng-class="{'is-loading':inProgress}">Login</button>
@@ -83,11 +52,12 @@
             <div class="col-xs-3">
                 <div class="form-group">
                     <select class="selectpicker form-control" ng-model="auth.bloodType">
-                        <option></option>
-                        <option value="0">AB</option>
-                        <option value="1">A</option>
-                        <option value="2">B</option>
-                        <option value="3">O</option>
+                        <optgroup label="Blood Type">
+                            <option value="0">AB</option>
+                            <option value="1">A</option>
+                            <option value="2">B</option>
+                            <option value="3">O</option>
+                        </optgroup>
                     </select>
                 </div>
             </div>

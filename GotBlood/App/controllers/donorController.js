@@ -4,7 +4,7 @@
         $scope.users = result.data;
     });
 
-    
+
 }]);
 
 

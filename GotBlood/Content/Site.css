@@ -31,3 +31,8 @@ textarea {
     overflow: hidden;
   
 }
+
+.col-xs-12 {
+    margin: auto 0;
+}
+
