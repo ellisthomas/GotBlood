@@ -20,6 +20,11 @@
             templateUrl: "App/views/bank/bank.html",
             controller: "bloodBankController"
         })
+        .when("/community",
+        {
+            templateUrl: "App/views/home/community.html",
+            controller: "bloodDriveController"
+        })
         .otherwise("/",
     );
 }]);

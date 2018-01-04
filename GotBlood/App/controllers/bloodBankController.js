@@ -11,4 +11,33 @@
         $scope.banks = result.data;
     });
 
+    $scope.drive;
+
+    $scope.bloodDrive = () => {
+        var drive = $scope.drive;
+        console.log("$scope.drive", $scope.drive);
+        $http({
+            method: 'POST',
+            url: "/api/BloodDrive",
+            data: {
+                Date: drive.Date,
+                BloodDriveName: drive.BloodDriveName,
+                BloodDriveStreetAddress: drive.BloodDriveCity,
+                BloodDriveCity: drive.BloodDriveCity,
+                BloodDriveState: drive.BloodDriveState,
+                BloodDriveZip: drive.BloodDriveZip
+            }
+        })
+            .then((result) => {
+                resolve(result);
+                console.log("result", result);
+            }).catch((error) => {
+                reject(error);
+            });
+    };
+
+    $http.get("api/BloodDrive").then(function (result) {
+        $scope.drive = result.data;
+    });
+
 }]);

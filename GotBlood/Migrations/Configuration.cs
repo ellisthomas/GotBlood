@@ -42,7 +42,7 @@ namespace GotBlood.Migrations
             //userManager.AddToRoleAsync(user.Id, "Admin").Wait();
 
             context.BloodBank.AddOrUpdate(
-                x => x.BloodBankStreetAddress,
+                x => x.BloodBankName,
                 new DataModels.BloodBank
                 {
                     BloodBankName = "Nashville Platelet Donation Center",

@@ -227,6 +227,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BloodDriveController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="DataModels\BloodBank.cs" />
@@ -270,6 +271,10 @@
     <Compile Include="Migrations\201712200124189_updatedBloodBanks1.Designer.cs">
       <DependentUpon>201712200124189_updatedBloodBanks1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801030300168_bloodDriveUpdateForModal.cs" />
+    <Compile Include="Migrations\201801030300168_bloodDriveUpdateForModal.Designer.cs">
+      <DependentUpon>201801030300168_bloodDriveUpdateForModal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -290,6 +295,7 @@
     <Content Include="App\views\bank\bank.html" />
     <Content Include="App\views\donor\donor.html" />
     <Content Include="App\views\drives.html" />
+    <Content Include="App\views\home\community.html" />
     <Content Include="App\views\home\home.html" />
     <Content Include="App\views\login.html" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -399,6 +405,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712200124189_updatedBloodBanks1.resx">
       <DependentUpon>201712200124189_updatedBloodBanks1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801030300168_bloodDriveUpdateForModal.resx">
+      <DependentUpon>201801030300168_bloodDriveUpdateForModal.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

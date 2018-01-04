@@ -81,6 +81,7 @@ namespace GotBlood.Controllers
             return users;
         }
 
+
         //GET api/Account/BloodBanks
         [Route("BloodBanks")]
         public IEnumerable<BloodBank> GetBloodBanks()
@@ -89,42 +90,6 @@ namespace GotBlood.Controllers
             var banks = db.BloodBank;
             return banks;
         }
-
-        // POST api/Account/CommunityDrive
-        //[AllowAnonymous]
-        //[Route("CommunityDrive")]
-        //public  IEnumerable<BloodDrive> Get
-
-        // POST api/Account/BloodDrive/Community
-        [AllowAnonymous]
-        [Route("Community")]
-        public async Task<IHttpActionResult> BloodDrive(BloodDrive model)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            var drive = new BloodDrive() { Location = model.Location, Date = model.Date,};
-
-            IdentityResult result;
-            try
-            {
-                result = await CommunityDrive.CreateAsync(drive, model.Location);
-            }
-            catch (Exception ex)
-            {
-                throw;
-            }
-
-            if (!result.Succeeded)
-            {
-                return GetErrorResult(result);
-            }
-
-            return Ok();
-        }
-
 
         // POST api/Account/Logout
         [Route("Logout")]
