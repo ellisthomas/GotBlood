@@ -20,11 +20,6 @@
             templateUrl: "App/views/bank/bank.html",
             controller: "bloodBankController"
         })
-        .when("/community",
-        {
-            templateUrl: "App/views/home/community.html",
-            controller: "bloodDriveController"
-        })
         .otherwise("/",
     );
 }]);
@@ -32,7 +27,7 @@
 app.run(["$rootScope", "$http", "$location", function ($rootScope, $http, $location) {
 
     $rootScope.isLoggedIn = function () {
-        return !!sessionStorage.getItem("token")
+        return !!sessionStorage.getItem("token");
     }
 
     $rootScope.logout = function () {

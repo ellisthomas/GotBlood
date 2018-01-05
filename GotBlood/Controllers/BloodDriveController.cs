@@ -12,16 +12,16 @@ namespace GotBlood.Controllers
 
     public class BloodDriveController : ApiController
     {
-        // POST api/Account/BloodDrive
+        // POST api/BloodDrive
         [AllowAnonymous]
         [Route("api/BloodDrive")]
-        public IHttpActionResult BloodDrive (BloodDrive model)
+        public IHttpActionResult BloodDrive(BloodDrive model)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-        
+
 
             var db = new ApplicationDbContext();
             db.BloodDrives.Add(model);
@@ -30,6 +30,7 @@ namespace GotBlood.Controllers
             return Ok();
         }
 
+      
 
 
     }

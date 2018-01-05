@@ -288,7 +288,6 @@
     <Content Include="App\app.js" />
     <Content Include="App\appconfig.js" />
     <Content Include="App\controllers\bloodBankController.js" />
-    <Content Include="App\controllers\bloodDriveController.js" />
     <Content Include="App\controllers\donorController.js" />
     <Content Include="App\controllers\homeController.js" />
     <Content Include="App\controllers\loginController.js" />
