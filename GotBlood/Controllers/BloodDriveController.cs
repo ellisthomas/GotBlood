@@ -14,7 +14,7 @@ namespace GotBlood.Controllers
     {
         // POST api/BloodDrive
         [AllowAnonymous]
-        [Route("api/BloodDrive")]
+        [HttpPost,Route("api/BloodDrive")]
         public IHttpActionResult BloodDrive(BloodDrive model)
         {
             if (!ModelState.IsValid)
@@ -30,7 +30,16 @@ namespace GotBlood.Controllers
             return Ok();
         }
 
-      
+        //GET api/BloodDrive
+        [HttpGet, Route("api/GotBlood")]
+        public IEnumerable<BloodDrive> GetBloodDrive()
+        {
+            var db = new ApplicationDbContext();
+            var drives = db.BloodDrives;
+            return drives;
+        }
+
+
 
 
     }

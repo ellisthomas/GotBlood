@@ -29,15 +29,26 @@
             }
         })
             .then((result) => {
-                resolve(result);
                 console.log("result", result);
             }).catch((error) => {
-                reject(error);
+
+                console.log("reject", error);
             });
     };
 
-    //$http.get("api/BloodBanks").then(function (result) {
-    //    $scope.drive = result.data;
-    //});
+   var getBlood = () => {
+        $http.get("api/GotBlood")
+            .then(function (result) {
+                $scope.drives = result.data;
+                console.log("$scope.drives", $scope.drives);
+            
+            })
+            .catch((error) => {
+                console.log("error", error);
+            });
+    };
+
+   getBlood();
+    
 
 }]);
