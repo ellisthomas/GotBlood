@@ -1,114 +1,117 @@
-﻿<br />
-<br />
+﻿<div class="auth-background">
+    <br />
+    <br />
 
-<div uib-alert ng-repeat="alert in alerts" class="alert-danger" data-ng-animate="alert-danger">
-    {{alert.msg}}
-</div>
-
-
-<div class="auth-container">
-    <div class="container-fluid authenticate" ng-hide="authenticate">
-        <div class="container">
-        </div>
-        <div class="row">
-            <h2 class="black">Login</h2>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 input-group center-block">
-                <input type="text" class="form-control" placeholder="Username" ng-model="userLogin.username" required autofocus>
-            </div>
-        </div>
-        <br />
-        <div class="row">
-            <div class="col-xs-12 input-group">
-                <input type="password" class="form-control" placeholder="Password" ng-model="userLogin.password" required>
-            </div>
-        </div>
-        <br />
-        <div class="row">
-            <div class="col-xs-12 buttons">
-                <button class="col-xs-3 btn btn-danger" ng-click="login()" ng-class="{'is-loading':inProgress}">Login</button>
-            </div>
-        </div>
-        <div class="col-xs-12 center registerText"><a ng-click="authenticate = !authenticate">Dont have an account? Register here</a></div>
+    <div uib-alert ng-repeat="alert in alerts" class="alert-danger" data-ng-animate="alert-danger">
+        {{alert.msg}}
     </div>
 
-    <div class="container-fluid col-xs-12 registerUser" ng-show="authenticate">
 
-        <div class="container">
-    </div>
-        <div class="row">
-            <h2 class="black">Register</h2>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 input-group">
-                <input type="text" class="form-control" placeholder="First Name" ng-model="auth.firstName" required autofocus>
+    <div class="auth-container">
+        <div class="container-fluid authenticate" ng-hide="authenticate">
+            <div class="container">
             </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 input-group">
-                <input type="text" class="form-control" placeholder="Last Name" ng-model="auth.lastName" required autofocus>
+            <div class="row">
+                <h2 class="black">Login</h2>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 input-group">
-                <input type="text" class="form-control" placeholder="Birthdate" ng-model="auth.birthdate" required autofocus>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-3">
-                <div class="form-group">
-                    <select class="selectpicker form-control" ng-model="auth.bloodType">
-                        <optgroup label="Blood Type">
-                            <option value="0">AB</option>
-                            <option value="1">A</option>
-                            <option value="2">B</option>
-                            <option value="3">O</option>
-                        </optgroup>
-                    </select>
+            <div class="row">
+                <div class="col-xs-12 input-group center-block">
+                    <input type="text" class="form-control" placeholder="Username" ng-model="userLogin.username" required autofocus>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 input-group">
-                <input type="text" class="form-control" placeholder="Address" ng-model="auth.address" required autofocus>
+            <br />
+            <div class="row">
+                <div class="col-xs-12 input-group">
+                    <input type="password" class="form-control" placeholder="Password" ng-model="userLogin.password" required>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 input-group">
-                <input type="text" class="form-control" placeholder="City, State, Zip" ng-model="auth.location" required autofocus>
+            <br />
+            <div class="row">
+                <div class="col-xs-12 buttons">
+                    <button class="col-xs-3 btn btn-danger" ng-click="login()" ng-class="{'is-loading':inProgress}">Login</button>
+                </div>
             </div>
+            <div class="col-xs-12 center registerText"><a ng-click="authenticate = !authenticate">Dont have an account? Register here</a></div>
         </div>
-        <div class="row">
-            <div class="col-xs-12 input-group">
-                <input type="text" class="form-control" placeholder="Phone Number" ng-model="auth.phone" required autofocus>
+
+        <div class="container-fluid col-xs-12 registerUser" ng-show="authenticate">
+
+            <div class="container">
             </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 input-group">
-                <input type="email" class="form-control" placeholder="Email Address" ng-model="auth.email" required autofocus>
+            <div class="row">
+                <h2 class="black">Register</h2>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 input-group">
-                <input type="text" class="form-control" placeholder="Username" ng-model="auth.username" required autofocus>
+            <div class="row">
+                <div class="col-xs-12 input-group">
+                    <input type="text" class="form-control" placeholder="First Name" ng-model="auth.firstName" required autofocus>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 input-group">
-                <input type="password" class="form-control" placeholder="Password" ng-model="auth.password" required>
+            <div class="row">
+                <div class="col-xs-12 input-group">
+                    <input type="text" class="form-control" placeholder="Last Name" ng-model="auth.lastName" required autofocus>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 input-group">
-                <input type="password" class="form-control" placeholder="Confirm Password" ng-model="auth.confirm" required>
+            <div class="row">
+                <div class="col-xs-12 input-group">
+                    <input type="text" class="form-control" placeholder="Birthdate" ng-model="auth.birthdate" required autofocus>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 buttons">
-                <button class="col-xs-3 btn btn-danger" ng-click="registerUser()">Register</button>
+            <div class="row">
+                <div class="col-xs-3">
+                    <div class="form-group">
+                        <select class="selectpicker form-control" ng-model="auth.bloodType">
+                            <optgroup label="Blood Type">
+                                <option value="0">AB</option>
+                                <option value="1">A</option>
+                                <option value="2">B</option>
+                                <option value="3">O</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
             </div>
+            <div class="row">
+                <div class="col-xs-12 input-group">
+                    <input type="text" class="form-control" placeholder="Address" ng-model="auth.address" required autofocus>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 input-group">
+                    <input type="text" class="form-control" placeholder="City, State, Zip" ng-model="auth.location" required autofocus>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 input-group">
+                    <input type="text" class="form-control" placeholder="Phone Number" ng-model="auth.phone" required autofocus>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 input-group">
+                    <input type="email" class="form-control" placeholder="Email Address" ng-model="auth.email" required autofocus>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 input-group">
+                    <input type="text" class="form-control" placeholder="Username" ng-model="auth.username" required autofocus>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 input-group">
+                    <input type="password" class="form-control" placeholder="Password" ng-model="auth.password" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 input-group">
+                    <input type="password" class="form-control" placeholder="Confirm Password" ng-model="auth.confirm" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 buttons">
+                    <button class="col-xs-3 btn btn-danger" ng-click="registerUser()">Register</button>
+                </div>
+            </div>
+            <div class="col-xs-12 center registerText"><a ng-click="authenticate = !authenticate">Already have an account? Login here</a></div>
         </div>
-        <div class="col-xs-12 center registerText"><a ng-click="authenticate = !authenticate">Already have an account? Login here</a></div>
     </div>
+
 </div>

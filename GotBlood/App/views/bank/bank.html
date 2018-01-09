@@ -1,126 +1,131 @@
-﻿<br />
+﻿<div class="container" background-container>
 <br />
 <br />
-   <!-- Button trigger modal -->
-<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalHorizontal">
-    Create Blood Drive
-</button>
+<br />
+    <!-- Button trigger modal -->
+    <button class="btn btn-danger btn-lg col-md-4 text-center" data-toggle="modal" data-target="#myModalHorizontal">
+        Create Blood Drive
+    </button>
 
-<!-- Modal -->
-<div class="modal fade" id="myModalHorizontal" tabindex="-1" role="dialog"
-     aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <!-- Modal Header -->
-            <div class="modal-header">
-                <button type="button" class="close"
-                        data-dismiss="modal">
-                    <span aria-hidden="true">&times;</span>
-                    <span class="sr-only">Close</span>
-                </button>
-                <h4 class="modal-title" id="myModalLabel">
-                   Community Blood Drive
-                </h4>
-            </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModalHorizontal" tabindex="-1" role="dialog"
+         aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <button type="button" class="close"
+                            data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        Community Blood Drive
+                    </h4>
+                </div>
 
-            <!-- Modal Body -->
-            <div class="modal-body">
+                <!-- Modal Body -->
+                <div class="modal-body">
 
-                <form class="form-horizontal" role="form">
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label"
-                               for="name">Name:</label>
-                        <div class="col-xs-12 input-group">
-                            <input type="text" class="form-control" ng-model="drive.BloodDriveName"
-                                   id="name" placeholder="Blood Drive Name" />
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"
+                                   for="name">Name:</label>
+                            <div class="col-xs-12 input-group">
+                                <input type="text" class="form-control" ng-model="drive.BloodDriveName"
+                                       id="name" placeholder="Blood Drive Name" />
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label"
-                               for="address">Address:</label>
-                        <div class="col-xs-12 input-group">
-                            <input type="text" class="form-control" ng-model="drive.BloodDriveStreetAddress"
-                                   id="address" placeholder="Address" />
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"
+                                   for="address">Address:</label>
+                            <div class="col-xs-12 input-group">
+                                <input type="text" class="form-control" ng-model="drive.BloodDriveStreetAddress"
+                                       id="address" placeholder="Address" />
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label"
-                               for="city">City:</label>
-                        <div class="col-xs-12 input-group">
-                            <input type="text" class="form-control" ng-model="drive.BloodDriveCity"
-                                   id="city" placeholder="City" />
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"
+                                   for="city">City:</label>
+                            <div class="col-xs-12 input-group">
+                                <input type="text" class="form-control" ng-model="drive.BloodDriveCity"
+                                       id="city" placeholder="City" />
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label"
-                               for="state">State:</label>
-                        <div class="col-xs-12 input-group">
-                            <input type="text" class="form-control" ng-model="drive.BloodDriveState"
-                                   id="state" placeholder="State" />
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"
+                                   for="state">State:</label>
+                            <div class="col-xs-12 input-group">
+                                <input type="text" class="form-control" ng-model="drive.BloodDriveState"
+                                       id="state" placeholder="State" />
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label"
-                               for="zip">Zip:</label>
-                        <div class="col-xs-12 input-group">
-                            <input type="text" class="form-control" ng-model="drive.BloodDriveZip"
-                                   id="zip" placeholder="Zip" />
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"
+                                   for="zip">Zip:</label>
+                            <div class="col-xs-12 input-group">
+                                <input type="text" class="form-control" ng-model="drive.BloodDriveZip"
+                                       id="zip" placeholder="Zip" />
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label"
-                               for="date">Date:</label>
-                        <div class="col-xs-12 input-group">
-                            <input type="text" class="form-control" ng-model="drive.Date"
-                                   id="date" placeholder="Date of Blood Drive" />
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"
+                                   for="date">Date:</label>
+                            <div class="col-xs-12 input-group">
+                                <input type="text" class="form-control" ng-model="drive.Date"
+                                       id="date" placeholder="Date of Blood Drive" />
+                            </div>
                         </div>
-                    </div>  
-                </form>
-            </div>
+                    </form>
+                </div>
 
-            <!-- Modal Footer -->
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default"
-                        data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" ng-click="bloodDrive()" data-dismiss="modal">Save changes</button>
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default"
+                            data-dismiss="modal">
+                        Close
+                    </button>
+                    <button type="button" class="btn btn-primary" ng-click="bloodDrive()" data-dismiss="modal">Save changes</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 
-<input class="list-inline center-block text-center input-lg" type="text" name="" placeholder="Search..." ng-model="searchText">
-<h3>Donation Locations</h3>
-<div ng-repeat="bank in banks | filter: searchText">
-    <div class="panel panel-default panel-transparent">
-        <div class="panel-body">
-            <div class="col-xs-3"><a class="">{{bank.BloodBankName}} <br>{{bank.BloodBankStreetAddress}} {{bank.BloodBankCity}} {{bank.BloodBankState}} {{bank.BloodBankZip}} <br>{{bank.BloodBankPhone}}</a></div>
+    <input class="list-inline center-block text-center input-lg pull-right" type="text" name="" placeholder="Search..." ng-model="searchText">
+    <br />
+    <h3 class="list-inline center-block text-center input-lg">Donation Locations</h3>
+    <div ng-repeat="bank in banks | filter: searchText">
+        <div class="panel panel-default panel-transparent">
+            <div class="panel-body">
+                <div class="col-xs-3"><a class="blood-drives">{{bank.BloodBankName}} <br>{{bank.BloodBankStreetAddress}} {{bank.BloodBankCity}} {{bank.BloodBankState}} {{bank.BloodBankZip}} <br>{{bank.BloodBankPhone}}</a></div>
+            </div>
         </div>
     </div>
-</div>
 
 
+    <h3 class="list-inline center-block text-center input-lg">Community Blood Drives</h3>
 
-<div ng-repeat="drive in drives | filter: searchText">
-    <div class="panel panel-danger panel-transparent">
-        <div class="panel-body">
-            <div class="col-xs-3"><a class="">{{drive.BloodDriveName}} <br />{{drive.BloodDriveStreetAddress}} {{drive.BloodDriveCity}} {{drive.BloodDriveState}} {{drive.BloodDriveZip}} <br />{{drive.Date}}</a></div>
+    <div ng-repeat="drive in drives | filter: searchText">
+        <div class="panel panel-danger panel-transparent">
+            <div class="panel-body">
+                <div class="col-xs-3"><a class="blood-drives">{{drive.BloodDriveName}} <br />{{drive.BloodDriveStreetAddress}} {{drive.BloodDriveCity}} {{drive.BloodDriveState}} {{drive.BloodDriveZip}} <br />{{drive.Date | date:'MM/dd/yyyy'}}</a></div>
+            </div>
         </div>
     </div>
+
+    <ng-map zoom="12" center="36.166687, -86.779932">
+        <marker position="36.156812, 86.807536"
+                icon="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png">
+        </marker>
+        <marker position="36.156812, 86.807536"
+                icon="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png">
+        </marker>
+        <marker position="36.089195, -86.741524"
+                icon="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png">
+        </marker>
+        <marker position="36.159174, -86.778496"
+                icon="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png">
+        </marker>
+    </ng-map>
 </div>
-
-<ng-map zoom="12" center="36.166687, -86.779932">
-    <marker position="36.156812, 86.807536"
-            icon="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png">
-    </marker>
-    <marker position="36.156812, 86.807536"
-            icon="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png">
-    </marker>
-    <marker position="36.089195, -86.741524"
-            icon="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png">
-    </marker>
-    <marker position="36.159174, -86.778496"
-            icon="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png">
-    </marker>
-</ng-map>
-
