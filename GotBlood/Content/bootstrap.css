@@ -6209,9 +6209,11 @@ body.modal-open,
   clear: both;
 }
 
-.pull-right {
+/*.pull-right {
   float: right !important;
-}
+  padding-left: 650px;
+  margin-top: 119px;
+}*/
 
 .pull-left {
   float: left !important;
