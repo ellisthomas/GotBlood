@@ -784,8 +784,8 @@ pre code {
 }
 
 .row {
-  margin-right: -15px;
-  margin-left: -15px;
+  /*margin-right: -15px;*/
+  margin-left: -100px;
 }
 
 .row:before,
@@ -4494,7 +4494,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-default .navbar-link:hover {
-  color: #333333;
+  color: #fff;
 }
 
 .navbar-inverse {

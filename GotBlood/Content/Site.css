@@ -1,5 +1,31 @@
-﻿
+﻿.jumbotron-custom {
+    background-image: url("https://images.fastcompany.net/image/upload/w_1280,f_auto,q_auto,fl_lossy/wp-cms/uploads/2017/10/poster-p-1-How-The-Red-Cross-Has-Survived-In-Crisis-Mode-For-150-Years.jpg");
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-bottom: 1px solid #ff6a00;
+    margin-top: 75px;
+}
 
+.txt-home {
+    font-family: fantasy;
+    font-size: 100px;
+    color: cornflowerblue;
+    padding-top: 77px;
+}
+
+.jumbo {
+    font-size: 30px;
+    color: white;
+    text-indent: 15px;
+    text-align: justify;
+    padding-left: 89px;
+    margin-top: -13px;
+}
+
+/*.navbar-default {
+    background-color: darkred;
+}*/
 
 ///////////////////////////////////////////////////////
 
@@ -27,17 +53,4 @@ textarea {
     transition: width 0.4s ease-in-out;
  }
 
-.jumbotron {
-    position: relative;
-    background: #FFF url("jumbotron-bg.png") center center;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    overflow: hidden;
-  
-}
-
-.col-xs-12 {
-    margin: auto 0;
-}
 

@@ -94,16 +94,17 @@
 <div ng-repeat="bank in banks | filter: searchText">
     <div class="panel panel-default panel-transparent">
         <div class="panel-body">
-            <div class="col-xs-3"><a class="fa fa-address-card">{{bank.BloodBankName}} <br>{{bank.BloodBankStreetAddress}} {{bank.BloodBankCity}} {{bank.BloodBankState}} {{bank.BloodBankZip}} <br>{{bank.BloodBankPhone}}</a></div>
+            <div class="col-xs-3"><a class="">{{bank.BloodBankName}} <br>{{bank.BloodBankStreetAddress}} {{bank.BloodBankCity}} {{bank.BloodBankState}} {{bank.BloodBankZip}} <br>{{bank.BloodBankPhone}}</a></div>
         </div>
     </div>
 </div>
 
 
+
 <div ng-repeat="drive in drives | filter: searchText">
     <div class="panel panel-danger panel-transparent">
         <div class="panel-body">
-            <div class="col-xs-3">{{drive.BloodDriveName}} {{drive.BloodDriveStreetAddress}} {{drive.BloodDriveCity}} {{drive.BloodDriveState}} {{drive.BloodDriveZip}} {{drive.Date}}</div>
+            <div class="col-xs-3"><a class="">{{drive.BloodDriveName}} <br />{{drive.BloodDriveStreetAddress}} {{drive.BloodDriveCity}} {{drive.BloodDriveState}} {{drive.BloodDriveZip}} <br />{{drive.Date}}</a></div>
         </div>
     </div>
 </div>
